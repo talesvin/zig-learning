@@ -24,6 +24,7 @@ pub fn binary_search(comptime T: type, target: usize, items: []const T) ?usize {
             return mid;
         if (items[mid] > target) high = mid - 1 else low = mid + 1;
     }
+    return null;
 }
 
 /// input: type of the array, array to be sorted
